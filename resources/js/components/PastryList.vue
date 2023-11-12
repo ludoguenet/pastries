@@ -1,8 +1,8 @@
 <template>
 <div class="bg-white">
   <div class="py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">
-      <div class="mx-auto max-w-2xl px-4 lg:max-w-4xl lg:px-0">
+    <div class="mx-auto max-w-5xl px-2 sm:px-6 lg:px-8">
+      <div class="max-w-2xl px-4 lg:max-w-4xl lg:px-0">
         <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Historique de vos pâtisseries</h1>
         <p class="mt-2 text-sm text-gray-500">Vérifiez l'état des commandes récentes, gérez les retours et découvrez des produits similaires.</p>
       </div>
@@ -10,8 +10,8 @@
 
     <div class="mt-16">
       <h2 class="sr-only">Commandes récentes</h2>
-      <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">
-        <div class="mx-auto max-w-2xl space-y-8 sm:px-4 lg:max-w-4xl lg:px-0">
+      <div class="mx-auto max-w-5xl sm:px-2 lg:px-8">
+        <div class="max-w-2xl space-y-8 sm:px-4 lg:max-w-4xl lg:px-0">
           <div class="border-b border-t border-gray-200 bg-white shadow-sm sm:rounded-lg sm:border">
             <h3 class="sr-only">Order placed on <time datetime="2021-07-06">Jul 6, 2021</time></h3>
 
