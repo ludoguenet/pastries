@@ -19,4 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('pastries', IndexController::class)->name('pastries.index');
+Route::middleware(['treblle'])->group(function () : void {
+    Route::get('pastries', IndexController::class)->name('pastries.index');
+});
+
