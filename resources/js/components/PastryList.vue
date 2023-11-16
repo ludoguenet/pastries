@@ -111,7 +111,13 @@
                       <a href="#" class="whitespace-nowrap text-amber-600 hover:text-amber-500">Voir le produit</a>
                     </div>
                     <div class="flex flex-1 justify-center pl-4">
-                      <a href="#" class="whitespace-nowrap text-amber-600 hover:text-amber-500">Acheter encore</a>
+                      <a
+                       @click.prevent="refundAction(pastry.id)"
+                       href="#" 
+                       class="whitespace-nowrap text-amber-600 hover:text-amber-500"
+                       >
+                        Demande un remboursement
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -148,6 +154,16 @@ let day = date.getUTCDate().toString().padStart(2, '0');
 let formattedDate = `${day}/${month}/${year}`;
 
 return formattedDate;
+}
+
+const refundAction = async (id: number) => {
+  try {
+    let { data } = await axios.post(`/api/pastries/refund/${id}`);
+
+    console.log(data);
+  } catch(error) {
+    new Error(error);
+  }
 }
 
 onMounted(() => {

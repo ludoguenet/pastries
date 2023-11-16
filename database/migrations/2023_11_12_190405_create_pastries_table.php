@@ -24,10 +24,10 @@ return new class extends Migration
             $table->integer('price_in_cents')->default(0);
 
             $table
-            ->foreignIdFor(User::class)
-            ->nullable()
-            ->constrained()
-            ->nullOnDelete();
+                ->foreignIdFor(User::class)
+                ->nullable()
+                ->constrained()
+                ->nullOnDelete();
 
             $table->date('delivered_at');
 

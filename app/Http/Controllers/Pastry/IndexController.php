@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace App\Http\Controllers\Pastry;
 
 use App\Http\Controllers\Controller;
-use App\Models\Pastry;
+use App\Responses\Pastry\PastryIndexResponse;
 
 class IndexController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): PastryIndexResponse
     {
-        return Pastry::all();
+        return new PastryIndexResponse();
     }
 }
