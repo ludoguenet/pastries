@@ -16,6 +16,9 @@ class Pastry extends Model
         'delivered_at' => 'date',
     ];
 
+    /**
+     * @return BelongsTo<User, Pastry>
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');

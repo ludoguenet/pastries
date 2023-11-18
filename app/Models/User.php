@@ -44,6 +44,9 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    /**
+     * @return HasMany<Pastry>
+     */
     public function pastries(): HasMany
     {
         return $this->HasMany(Pastry::class, 'user_id');
