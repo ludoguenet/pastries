@@ -6,6 +6,7 @@ namespace App\Responses\Pastry;
 
 use App\Models\Pastry;
 use Illuminate\Contracts\Support\Responsable;
+use Symfony\Component\HttpFoundation\Response;
 
 class PastryRefundResponse implements Responsable
 {
@@ -22,6 +23,6 @@ class PastryRefundResponse implements Responsable
      */
     public function toResponse($request)
     {
-        return 'Remboursement de pâtisserie ID :'.$this->pastry->id;
+        return new Response('Remboursement de pâtisserie ID :'.$this->pastry->id);
     }
 }

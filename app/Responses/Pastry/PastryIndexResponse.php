@@ -6,6 +6,8 @@ namespace App\Responses\Pastry;
 
 use App\Models\Pastry;
 use Illuminate\Contracts\Support\Responsable;
+use Illuminate\Http\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 class PastryIndexResponse implements Responsable
 {
@@ -17,6 +19,9 @@ class PastryIndexResponse implements Responsable
      */
     public function toResponse($request)
     {
-        return Pastry::all();
+        return new JsonResponse(
+            data: Pastry::all(),
+            status: 200,
+        );
     }
 }
