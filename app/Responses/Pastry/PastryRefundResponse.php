@@ -6,6 +6,7 @@ namespace App\Responses\Pastry;
 
 use App\Models\Pastry;
 use Illuminate\Contracts\Support\Responsable;
+use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 class PastryRefundResponse implements Responsable
@@ -23,6 +24,9 @@ class PastryRefundResponse implements Responsable
      */
     public function toResponse($request)
     {
-        return new Response('Remboursement de pâtisserie ID :'.$this->pastry->id);
+        return new JsonResponse([
+            'data' => 'Remboursement de pâtisserie ID :'.$this->pastry->id,
+            'success' => true,
+        ]);
     }
 }

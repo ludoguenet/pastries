@@ -293,7 +293,7 @@ const formatDate = (dateToFormat: string) => {
 const refundAction = async (id: number) => {
     try {
         let { data } = await axios.post(`/api/pastries/refund/${id}`, {
-            type: "refund",
+            type: "refunded",
         });
 
         console.log(data);
