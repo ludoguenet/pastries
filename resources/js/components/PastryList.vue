@@ -311,5 +311,17 @@ onMounted(async () => {
         .then((res) => console.log(res));
 
     await axios.get("/api/pastries").then((res) => (pastries.value = res.data));
+
+    document.querySelector("#register-link")?.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        try {
+            axios.get("/api/pastries/register");
+
+            console.log("registered");
+        } catch (e) {
+            new Error(e);
+        }
+    });
 });
 </script>
